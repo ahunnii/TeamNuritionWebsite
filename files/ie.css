@@ -1,0 +1,210 @@
+/* 
+
+
+
+*/
+
+/*Generic body and list styling*/
+* {
+	margin:0;
+	padding:0px;
+	outline:0;
+}
+ul,li { list-style:none; }
+html, body {height: 100%;}
+html, body { 
+width:100%; 
+background-color:black; 
+font-family:Arial; 
+font-size:13px; 
+}
+
+/*Defaults for clear and focus*/
+:focus { outline:0; }
+.clear:after { content:"."; visibility:showS; display:block; height:0; clear:both; }
+* html .clear { height:1%; }
+
+/*Overall Wrapper*/
+.wrapper { width:1005px; margin:0 auto; }
+
+
+/*Defaults for page links*/
+a,a:link, a:visited { text-decoration:none; color:#000000}
+a:hover {color: #000000;}
+img {
+	border:0;
+}
+* {
+	zoom: 1;
+	font-size: 16px;
+}
+
+/*Begin Team Ntrition Styling*/
+
+body{
+
+background: 
+-webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.09, rgb(153,153,153)),
+    color-stop(0.55, rgb(242,242,242)),
+    color-stop(0.78, rgb(240,237,240))
+);
+background:
+-moz-linear-gradient(
+    center bottom,
+    rgb(153,153,153) 9%,
+    rgb(242,242,242) 55%,
+    rgb(240,237,240) 78%
+);
+
+}
+
+}
+
+
+
+#infoframe { 
+width:150px; 
+height:190px;  
+margin-top:-190px; 
+display:none; 
+position:absolute; 
+background-image:url(""); 
+background-repeat:no-repeat; 
+font-weight: normal;
+font-style: normal;
+font-family: 'LeagueGothicRegular', Arial;
+font-size-adjust: 0.55;
+letter-spacing:-1px;
+color:white;
+font-size:40px;
+line-height:60px;
+text-shadow:2px 2px 2px #0A0A0A;
+text-transform:uppercase;
+			}
+			
+			
+.pageholder { width:1347px; overflow-x:hidden;}
+
+.page {  float: left; width:1340px; }
+
+.page:first-child {  width:1340px;}
+
+.pageslider { height:auto; overflow-y:hidden; width:7000px; }
+
+.pageheadercell {height:auto; width:500px; padding:1px; border:groove; 
+background-color:white; font-size:12px; word-spacing: 10px; line-height:auto;
+font-style:normal; font:Verdana, Geneva, sans-serif;}
+
+.cell {height:auto; width:500px; padding:1px; border:groove; background-color:white; font-size:12px; word-spacing: 6px; line-height:20px;font-style:normal; font:Verdana, Geneva, sans-serif;
+margin-left:190px; margin-top:-510px}
+
+.cell1 {height:auto; width:500px; text-align:left; padding:1px; border: none; background-color: transparent; font-size:12px; word-spacing: 6px; line-height:20px;font-style:normal; font:Verdana, Geneva, sans-serif;
+margin-left:10px; margin-top:100}
+
+.cell2 {height:auto; width:500px; padding:1px; border:groove; background-color:white; font-size:12px; word-spacing: 6px; line-height:20px;font-style:normal; font:Verdana, Geneva, sans-serif;
+margin-left:190px; margin-top:-510px}
+
+.sidecell {height:500px; width:400px; padding:1px; border: none; background-color: transparent;
+ margin-left: 750px; margin-top:80px}
+ 
+.sidecell1 {height:500px; width:400px; padding:1px; border: none; background-color: transparent;
+ margin-left: 750px; margin-top:-260px}
+ 
+.sidecell2 {height:500px; width:400px; padding:1px; border:groove; background-color:white;
+ margin-left: 750px; margin-top: -650px}
+ 
+.sidecell3 {height:500px; width:400px; padding:1px; border:groove; background-color:white;
+ margin-left:; margin-top:}
+ 
+.sidecell4 {height:500px; width:400px; padding:1px; border:groove; background-color:white;
+ margin-left:; margin-top:}
+ 
+.sidecell5 {height:500px; width:400px; padding:1px; border:groove; background-color:white;
+ margin-left:; margin-top:}
+ 
+.sidecell6 {height:500px; width:400px; padding:1px; border:groove; background-color:white;
+ margin-left:; margin-top:}
+ 
+.sidecell7 {height:500px; width:400px; padding:1px; border:groove; background-color:white;
+ margin-left:; margin-top:}
+ 
+.sidecell8 {height:500px; width:400px; padding:1px; border:groove; background-color:white;
+ margin-left:; margin-top:}
+
+#mantletext {
+	margin:0 auto;
+	margin-top:40px;
+	font-family:Times "Times New Roman", Times, serif;
+	font-size-adjust: 0.55;
+	letter-spacing:-1px;
+	color:#000000;
+	font-size:24px;
+	text-transform:capitalize;
+	line-height:85px;
+	text-shadow:0 1px 0 #FFFFFF;
+	margin-left:190px;
+	float:auto;
+
+			}
+			
+#mantletext h2
+{
+margin:0 auto;
+color:#000000 ;
+letter-spacing:-1px;
+text-shadow:0 1px 0 #FFFFFF;
+}
+
+
+#mantletext h3 {
+  font-size:24px;   
+}
+
+#mantletext h4 {
+  font-size:24px;   
+}
+
+#mantletext h5 {
+  font-size:24px;   
+}
+
+header { width:100%; height:98px;  display:block; }
+
+#teamnutrition { height: 150px; background-position: 50% 0px; background:no-repeat scroll center top;}
+# .wrapper { width:1006px; }
+
+
+.frame {
+	width:108px;
+	height:70px;
+	font-size:20px;
+	color:#6c6c6b;
+	float:right;
+	display:inline;
+	margin:10px 20px 0;
+	line-height:25px;
+	text-align:center;
+}
+.frame a {  width:180px; height:80px; display:block; padding:10px 0 0; color:#000000; margin-top:20px;}
+.frame span { font-size:24px; color:#000000; margin:1px 0 0;  }
+.frame span {
+
+font-family: 'LeagueGothicRegular', sans-serif;
+font-size-adjust: 0.55;
+letter-spacing:-1px;
+color:#000000;
+font-size:40px;
+	
+			}
+.first { margin-left:0; }
+.fourth { margin-right:0; }
+#overlay { width:100%; height:109px; background:rgba(107,115,114,.3); margin:-55px 0 0; z-index:2; margin-top:100px; }
+#content #left { width:615px; float:left; }
+#content #right { width:340px; float:right; }
+
+
+#teamnutrition{background-image:url("../images/Banner2.png")}

@@ -1,0 +1,340 @@
+<html>
+<head>
+<title>Image Gallery</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css"></link>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="fonts/aura_400.font.js"></script>
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="js/pngfix.js"></script>
+<![endif]--> 
+</head>
+
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+   
+	 /*Your ShineTime Welcome Image*/
+	 var default_image = 'images/large/default.jpg';
+	 var default_caption = 'Welcome to the Team Nutrition Image Gallery';
+	 
+	 /*Load The Default Image*/
+	 loadPhoto(default_image, default_caption);
+	 
+	 
+	 function loadPhoto($url, $caption)
+	 {
+	 
+	 
+	    /*Image pre-loader*/
+	    showPreloader();
+	    var img = new Image();
+	    jQuery(img).load( function() 
+		{
+			jQuery(img).hide();
+			hidePreloader();
+		
+        }).attr({ "src": $url });
+	
+	    $('#largephoto').css('background-image','url("' + $url + '")');
+		$('#largephoto').data('caption', $caption);
+	 }
+
+	 
+	 /* When a thumbnail is clicked*/
+	 $('.thumb_container').click(function()
+	 {
+	     
+		  var handler = $(this).find('.large_image');
+		  var newsrc  = handler.attr('src');
+		  var newcaption  = handler.attr('rel');
+		  loadPhoto(newsrc, newcaption);
+	 
+	 });
+	 
+	 /*When the main photo is hovered over*/
+	 $('#largephoto').hover(function()
+	 {
+	    
+		var currentCaption  = ($(this).data('caption'));
+		var largeCaption = $(this).find('#largecaption');
+		
+		largeCaption.stop();
+		largeCaption.css('opacity','0.9');
+		largeCaption.find('.captionContent').html(currentCaption);
+		largeCaption.fadeIn()
+	
+	
+		
+		 largeCaption.find('.captionShine').stop();
+         largeCaption.find('.captionShine').css("background-position","-550px 0"); 
+         largeCaption.find('.captionShine').animate({backgroundPosition: '550px 0'},700);
+		 
+		 Cufon.replace('.captionContent');
+		
+
+	 },
+	 
+	 function()
+	 {
+	    var largeCaption = $(this).find('#largecaption');
+		largeCaption.find('.captionContent').html('');
+		largeCaption.fadeOut();
+	 
+	 });
+	
+	 
+	 
+     /* When a thumbnail is hovered over*/
+	 $('.thumb_container').hover(function()
+	 {  
+         $(this).find(".large_thumb").stop().animate({marginLeft:-7, marginTop:-7},200);
+		 $(this).find(".large_thumb_shine").stop();
+         $(this).find(".large_thumb_shine").css("background-position","-99px 0"); 
+         $(this).find(".large_thumb_shine").animate({backgroundPosition: '99px 0'},700);
+			 
+	 }, function()
+	 {
+	    $(this).find(".large_thumb").stop().animate({marginLeft:0, marginTop:0},200);
+	 });
+	 
+	 function showPreloader()
+	 {
+	   $('#loader').css('background-image','url("images/interface/loader.gif")');
+	 }
+	 
+	 function hidePreloader()
+	 {
+	   $('#loader').css('background-image','url("")');
+	 }
+   
+  });
+</script>
+
+<div id="container">
+<div id="containertitle">
+Team Nutrition Image Gallery
+</div>
+   <div class="mainframe">
+      <div id="largephoto">
+	  <div id="loader"></div>
+	  
+	  
+	    <div id="largecaption">
+		 <div class="captionShine"></div>
+		   <div class="captionContent"></div>
+		  
+		</div>
+		
+       <div id="largetrans">  
+      </div>
+	        
+      </div>
+      
+   </div>
+   <div class="thumbnails">
+   <br><br><br>
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample1.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample1.jpg" class="large_image" rel=" Our Engineering Program students designing the garden." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->          
+       
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample2.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample2.jpg" class="large_image" rel="Showing pride in their seeds." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->          
+       
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample3.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample3.jpg" class="large_image" rel="Agri-Science students selecting the garden vegetables." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->           
+       
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample4.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample4.jpg" class="large_image" rel="Agri-Science students taking care of the plants." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->           
+       
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample5.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample5.jpg" class="large_image" rel="The start of the Community Garden." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->          
+       
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample6.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample6.jpg" class="large_image" rel="Students planting the vegetables." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->     
+
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample7.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample7.jpg" class="large_image" rel="Digging away in the garden." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->    
+
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample8.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample8.jpg" class="large_image" rel="Setting the planting beds." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->  
+
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample9.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample9.jpg" class="large_image" rel="Building Trades student building the planting beds for the garden." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->    	   
+	   
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample10.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample10.jpg" class="large_image" rel="All work and no play is just not are style..." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->    	
+
+   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample11.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample11.jpg" class="large_image" rel="Preping the rest of the garden." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->    	   
+	   	   
+	   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample12.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample12.jpg" class="large_image" rel="Taking care of the garden over the summer. " />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->    	   
+	      
+	   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample13.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample13.jpg" class="large_image" rel="It's harvest time!" />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->  
+	   
+	   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample14.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample14.jpg" class="large_image" rel="Food harvested was donated to the local area food pantries. " />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->  
+
+	   <!-- start entry-->
+                    <div class="thumbnailimage">
+                        <div class="thumb_container"> 
+                            <div class="large_thumb"> 
+                        		<img src="images/thumbnails/sample15.jpg" class="large_thumb_image" alt="thumb" /> 
+                                <img src="images/large/sample15.jpg" class="large_image" rel="Commemorating the new community garden." />
+                                <div class="large_thumb_border"></div>
+                                <div class="large_thumb_shine"></div>
+                              </div>
+						</div>
+                       </div>
+       <!--end entry-->    	 
+	   	   
+	   
+	      
+   </div>
+</div>
+
+
+</html>
